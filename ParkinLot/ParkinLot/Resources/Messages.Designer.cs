@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Estacionamiento.Resources {
+namespace ParkinLot.Resources {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace Estacionamiento.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Alerts {
+    public class Messages {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Alerts() {
+        internal Messages() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Estacionamiento.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Estacionamiento.Resources.Alerts", typeof(Alerts).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ParkinLot.Resources.Messages", typeof(Messages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,6 +57,42 @@ namespace Estacionamiento.Resources {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirma el Empleado?.
+        /// </summary>
+        public static string Employee_Confirm {
+            get {
+                return ResourceManager.GetString("Employee_Confirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registro Eliminado Correctamente.
+        /// </summary>
+        public static string Employee_Confirm_Delete {
+            get {
+                return ResourceManager.GetString("Employee_Confirm_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to El Empleado se ha registrado con éxito..
+        /// </summary>
+        public static string Employee_Success {
+            get {
+                return ResourceManager.GetString("Employee_Success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ¿Está seguro que desea eliminar el registro?.
+        /// </summary>
+        public static string Employee_Success_Delete {
+            get {
+                return ResourceManager.GetString("Employee_Success_Delete", resourceCulture);
             }
         }
     }

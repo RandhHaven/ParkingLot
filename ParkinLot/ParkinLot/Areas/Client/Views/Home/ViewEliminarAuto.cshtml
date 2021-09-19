@@ -1,36 +1,47 @@
-﻿@using Estacionamiento.Controls;
-@using Estacionamiento.Resources;
+﻿@using ParkinLot.Controls;
+@using ParkinLot.Resources;
 
 @model ParkingLot.Models.Areas.Auto
+
 @{
-    ViewData["Title"] = "ViewCrearAuto";
+    ViewData["Title"] = "ViewEliminarAuto";
 }
 
-@using (Html.BeginForm("ViewCrearAuto", "Home", FormMethod.Get))
+<h1>ViewEliminarAuto</h1>
+
+@using (Html.BeginForm("ViewEliminarAuto", "Home", FormMethod.Get))
 {
     <div class="row pt-5">
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <h4> @Labels.CreateCar </h4>
+                    <h4> Eliminar Auto </h4>
                 </div>
                 <form id="login-form" class="card-body container">
                     <div class="row pt-2">
-                        <div class="col-md-6">
-                            @Html.LabelFor(m => m.Patente, Labels.Patent, ColumnWidth.Two)
-                            <div class="col-md-4">
-                                @Html.EditorFor(m => m.Patente)
-                                @Html.ValidationMessageFor(m => m.Patente, "Ingrese la Patente.", new { @class = "text-danger" })
-                            </div>
+                        <div class="col-md-2">
+                            @Html.LabelForModel("Id: ", new { @class = "control-label" })
+                            @Html.LabelFor(m => m.IdAuto, Labels.Id, ColumnWidth.Two)
                         </div>
-
-                        <div class="col-md-6">
-                            @Html.LabelFor(m => m.Empleado, Labels.Employee, ColumnWidth.Two)
-                            <div class="col-md-4">
-                                @Html.EditorFor(m => m.Empleado)
-                                @Html.ValidationMessageFor(m => m.Patente, "Ingrese la Patente.", new { @class = "text-danger" })
-                            </div>
+                        <div class="col-md-4">
+                            @Html.TextBoxFor(m => m.IdAuto, new { @class = "form-control width=100%;", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="row pt-2">
+                        <div class="col-md-2">
+                            @Html.LabelForModel("Patente: ", new { @class = "control-label" })
+                        </div>
+                        <div class="col-md-4">
+                            @Html.TextBoxFor(m => m.Patente, new { @class = "form-control width=100%" })
+                            @Html.ValidationMessageFor(m => m.Patente, "Ingrese la Patente.", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-md-2">
+                            @Html.LabelForModel("Empleado: ", new { @class = "control-label" })
+                        </div>
+                        <div class="col-md-4">
+                            @Html.TextBoxFor(m => m.Empleado, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Empleado, "Ingrese el Empleado.", new { @class = "text-danger" })
                         </div>
                     </div>
                     <div class="row pt-2 form-group">
@@ -50,10 +61,11 @@
                         </div>
                     </div>
 
+
                     <div class="row d-print-table-row">
                         <div class="col-md-4"> </div>
                         <div class="col-md-4">
-                            <input class="btn-primary d-block form-control" ; type="submit" name="btnSubmit" value="Crear Auto" />
+                            <input class="btn-primary d-block form-control" ; type="submit" name="btnSubmit" value="Eliminar Auto" />
                         </div>
                         <div class="col-md-4"> </div>
                     </div>
