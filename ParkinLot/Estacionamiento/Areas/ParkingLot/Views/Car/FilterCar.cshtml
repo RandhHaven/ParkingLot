@@ -1,0 +1,42 @@
+﻿@using Estacionamiento.Resources;
+@using ParkingLot.Models.Areas.ParkingLot.Car;
+@using Estacionamiento.Controls;
+
+@model CarVM
+
+@{
+    ViewData["Title"] = "Detalle De Estacionamiento";
+}
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            @Labels.Filters
+        </h4>
+    </div>
+    <div class="form-horizontal" role="form">
+        <div class="form-group">
+            <div class="container-fluid">
+                <div class="top-separation row">
+                    @Html.LabelFor(m => m.CarFilter.Modelo, Labels.Patent, ColumnWidth.Two)
+                    <div class="col-md-3" style="margin-bottom:10px">
+                        @Html.DropDownListFor(model => model.CarFilter, Enumerable.Range(2000, 20)
+                            .Select(x => new SelectListItem { Text = x.ToString() }))
+                    </div>
+                    @Html.LabelFor(m => m.CarFilter.Marca, Labels.Brand, ColumnWidth.Two)
+                    <div class="col-md-3" style="margin-bottom:10px">
+                        @Html.DropDownListFor(model => model.CarFilter, Enumerable.Range(2000, 20)
+                            .Select(x => new SelectListItem { Text = x.ToString() }))
+                    </div>
+                </div>
+                <div class="top-separation row">
+                    @Html.LabelFor(m => m.CarFilter.Marca, Labels.Email, ColumnWidth.Two)
+                    <div class="col-md-3" style="margin-bottom:10px">
+                        @Html.DropDownListFor(model => model.CarFilter, Enumerable.Range(2000, 20)
+                            .Select(x => new SelectListItem { Text = x.ToString() }))
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

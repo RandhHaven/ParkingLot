@@ -1,0 +1,72 @@
+﻿@model ParkingLot.Models.Areas.Empleado
+@{
+    ViewData["Title"] = "ViewEditarEmpleados";
+}
+
+<h1>ViewEditarEmpleados</h1>
+
+@using (Html.BeginForm("ViewEditarEmpleado", "Home", FormMethod.Post))
+{
+    <div class="row pt-5">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h4> Editar Empleado </h4>
+                </div>
+                <form id="login-form" class="card-body container">
+                    <div class="row pt-2">
+                        <div class="col-md-2">
+                            @Html.LabelForModel("Id. Empleado: ", new { @class = "control-label" })
+                        </div>
+                        <div class="col-md-4">
+                            @Html.TextBoxFor(m => m.IdEmpleado, new { @class = "form-control width=100%;", @readonly = "readonly"})
+                        </div>
+                    </div>
+                    <div class="row pt-2">
+                        <div class="col-md-2">
+                            @Html.LabelForModel("Legajo: ", new { @class = "control-label" })
+                        </div>
+                        <div class="col-md-4">
+                            @Html.TextBoxFor(m => m.Legajo, new { @class = "form-control width=100%" })
+                            @Html.ValidationMessageFor(m => m.Legajo, "Ingrese el Legajo.", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-md-2">
+                            @Html.LabelForModel("Nro. Celular: ", new { @class = "control-label" })
+                        </div>
+                        <div class="col-md-4">
+                            @Html.TextBoxFor(m => m.NroCelular, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.NroCelular, "Ingrese el Nro. de Celular.", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="row pt-2 form-group">
+                        <div class="col-md-2">
+                            @Html.LabelForModel("Nombre: ", new { @class = "control-label" })
+                        </div>
+                        <div class="col-md-4">
+                            @Html.TextBoxFor(m => m.Nombre, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Nombre, "Ingrese el Nombre.", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-md-2">
+                            @Html.LabelForModel("Apellido: ", new { @class = "control-label" })
+                        </div>
+                        <div class="col-md-4">
+                            @Html.TextBoxFor(m => m.Apellido, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Apellido, "Ingrese el Apellido.", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    
+                    <div class="row d-print-table-row">
+                        <div class="col-md-4"> </div>
+                        <div class="col-md-4">
+                            <input class="btn-primary d-block form-control" ; type="submit" name="btnSubmit" value="Editar Empleado" />
+                        </div>
+                        <div class="col-md-4"> </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+}

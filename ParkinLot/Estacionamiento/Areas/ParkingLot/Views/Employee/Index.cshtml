@@ -1,0 +1,21 @@
+﻿@using Estacionamiento.Resources;
+@using ParkingLot.Models.Areas.ParkingLot.Employee;
+@using Estacionamiento.Controls;
+
+@model EmployeeVM
+
+@{
+    ViewData["Title"] = "Detalle De Estacionamiento";
+}
+
+<div class="panel-group" id="accordion">
+    <div class="form-horizontal">
+        @await Html.PartialAsync("/Areas/ParkingLot/Views/Employee/FilterEmployee.cshtml")
+        @await Html.PartialAsync("/Areas/ParkingLot/Views/Employee/ViewEmployees.cshtml")
+        @await Html.PartialAsync("/Areas/ParkingLot/Views/Employee/EditEmployee.cshtml")
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/ParkingLot/ParkingLotEmployee.js"></script>
+}

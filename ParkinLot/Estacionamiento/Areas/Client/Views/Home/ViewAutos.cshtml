@@ -1,0 +1,82 @@
+﻿@model List<ParkingLot.Models.Areas.Auto>
+
+@{
+    ViewData["Title"] = "Detalle De Estacionamiento";
+}
+
+@using (Html.BeginForm("ViewAutos", "Home", FormMethod.Get))
+{
+    <div class="">
+        <div class="row">
+            <div class="col-md-3">
+                <label></label>
+            </div>
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-3">
+
+            </div>
+
+        </div>
+        <div class="row">
+            @foreach (var sist in Model)
+            {
+                <div class="col-md-3">
+                    @sist.Patente
+                </div>
+                <div class="col-md-3">
+                    @sist.Marca
+                </div>
+                <div class="col-md-3">
+                    @sist.Modelo
+                </div>
+                <div class="col-md-3">
+                    @sist.Empleado
+                </div>
+            }
+        </div>
+    </div>
+    <div>
+        <h1> Listado de Autos </h1>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th style="width:100px;">Patente</th>
+                <th style="width:100px;">Marca</th>
+                <th style="width:100px;">Modelo</th>
+                <th style="width:200px;">Empleado</th>
+                <th style="width:200px; align-content:center">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var sist in Model)
+            {
+                <tr>
+                    <td>@sist.Patente</td>
+                    <td>@sist.Marca</td>
+                    <td>@sist.Modelo</td>
+                    <td>@sist.Empleado</td>
+                    <td>
+                        <a class="btn btn-primary" href="~/Home/ViewEditarAuto/@sist.IdAuto" title="Editar">
+                            Editar <i class="glyphicon glyphicon-pencil"></i>
+                        </a>                       
+                        <a class="btn btn-danger" href="~/Home/ViewEliminarAuto/@sist.IdAuto" title="Eliminar">
+                            Eliminar  <i class="glyphicon glyphicon-minus"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div>
+        <a class="btn btn-success" href="~/Home/ViewCrearAuto" title="Crear">
+            Agregar Auto
+        </a>
+    </div>
+}
+

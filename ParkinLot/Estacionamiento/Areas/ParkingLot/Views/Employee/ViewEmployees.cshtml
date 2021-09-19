@@ -1,0 +1,66 @@
+﻿@using Estacionamiento.Resources;
+@using ParkingLot.Models.Areas.ParkingLot.Employee;
+
+@model EmployeeVM
+
+@{
+    ViewData["Title"] = "Detalle De Empleados";
+}
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            @Labels.EmployeesList
+        </h4>
+    </div>
+    <div class="panel-body" style="padding: 0;">
+        @using (Html.BeginForm("ViewEmployees", "Employee", FormMethod.Get))
+        {
+            <table class="table table-striped table-bordered" id="tableEmployees">
+                <thead>
+                    <tr>
+                        <th style="width:100px;">Legajo</th>
+                        <th style="width:100px;">Nombre</th>
+                        <th style="width:100px;">Apellido</th>
+                        <th style="width:200px;">Edad</th>
+                        <th style="width:200px;">Celular</th>
+                        <th style="width:200px;">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var sist in Model.List)
+                    {
+                        <tr>
+                            <td>@sist.Legajo</td>
+                            <td>@sist.Nombre</td>
+                            <td>@sist.Apellido</td>
+                            <td>@sist.Edad</td>
+                            <td>@sist.NroCelular</td>
+                            <td>
+                                <a class="btn btn-primary" href="~/Home/ViewEditarEmpleado/@sist.IdEmpleado" title="Editar">
+                                    Editar <i class="glyphicon glyphicon-pencil"></i>
+                                </a>
+                                <a class="btn btn-danger" href="~/Home/ViewEliminarEmpleado/@sist.IdEmpleado" title="Eliminar">
+                                    Eliminar <i class="glyphicon glyphicon-minus"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <div>
+                <a class="btn btn-success" href="~/Home/ViewCrearEmpleado" title="Crear">
+                    Add Employee
+                </a>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('#tableEmployees').DataTable();
+        });
+    </script>
+}

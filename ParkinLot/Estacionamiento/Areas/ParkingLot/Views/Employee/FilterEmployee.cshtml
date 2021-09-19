@@ -1,0 +1,26 @@
+﻿@using Estacionamiento.Resources;
+@using ParkingLot.Models.Areas.ParkingLot.Employee;
+@using Estacionamiento.Controls;
+
+@model EmployeeVM
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            @Labels.Filters
+        </h4>
+    </div>
+    <div class="form-horizontal" role="form">
+        <div class="form-group">
+            <div class="container-fluid">
+                <div class="top-separation row">
+                    @Html.LabelFor(m => m.EmployeeFilter.Legajo, Labels.Patent, ColumnWidth.Two)
+                    <div class="col-md-3" style="margin-bottom:10px">
+                        @Html.DropDownListFor(model => model.EmployeeFilter, Enumerable.Range(2000, 20)
+                            .Select(x => new SelectListItem { Text = x.ToString() }))
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

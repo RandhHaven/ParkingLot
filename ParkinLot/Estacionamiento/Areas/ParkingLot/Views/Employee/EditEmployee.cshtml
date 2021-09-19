@@ -1,0 +1,45 @@
+﻿@using Estacionamiento.Resources;
+@using ParkingLot.Models.Areas.ParkingLot.Employee;
+@using Estacionamiento.Controls;
+
+@model EmployeeVM;
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            @Labels.EmployeeDetail
+        </h4>
+    </div>
+    <div id="Edit" class="panel-collapse collapse in">
+        <div class="panel-body">
+            <div class="row top-separation">
+                <div class="col-md-12 col-lg-12">
+                    <div class="row top-separation">
+                        @Html.LabelFor(m => m.EmployeeDetail.Nombre, Labels.EmployeeName, ColumnWidth.Two)
+                        <div class="col-md-4">
+                            @Html.EditorFor(x => x.EmployeeDetail.Nombre)
+                        </div>
+                        @Html.LabelFor(m => m.EmployeeDetail.Apellido, Labels.EmployeeLastName, ColumnWidth.Two)
+                        <div class="col-md-4">
+                            @Html.EditorFor(x => x.EmployeeDetail.Apellido)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row top-separation">
+                <div class="col-md-12 col-lg-12">
+                    <div class="row top-separation">
+                        @Html.LabelFor(m => m.EmployeeDetail.Email, Labels.Email, ColumnWidth.Two)
+                        <div class="col-md-4">
+                            @Html.EditorFor(x => x.EmployeeDetail.Email)
+                        </div>
+                        @Html.LabelFor(m => m.EmployeeDetail.Edad, Labels.Age, ColumnWidth.Two)
+                        <div class="col-md-4">
+                            @Html.EditorFor(x => x.EmployeeDetail.Edad)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

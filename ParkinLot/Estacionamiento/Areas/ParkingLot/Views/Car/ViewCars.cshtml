@@ -1,0 +1,33 @@
+﻿@using Estacionamiento.Resources;
+@using ParkingLot.Models.Areas.ParkingLot.Car;
+
+@model CarVM
+
+@{
+    ViewData["Title"] = "Detalle De Estacionamiento";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="panel panel-primary top-separation">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    @Labels.CarsList
+                </h4>
+            </div>
+            <div class="panel-body" style="padding: 0;">
+                <table class="table top-separation table-striped table-bordered" id="tableCars">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">@Labels.Patent</th>
+                            <th scope="col">@Labels.Brand</th>
+                            <th scope="col">@Labels.Model</th>
+                            <th scope="col">@Labels.Employee</th>
+                            <th style="width:200px; align-content:center">@Labels.Actions</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

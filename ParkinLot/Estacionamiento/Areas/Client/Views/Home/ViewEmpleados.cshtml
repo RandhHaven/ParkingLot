@@ -1,0 +1,49 @@
+﻿@model List<ParkingLot.Models.Areas.Empleado>
+
+@{
+    ViewData["Title"] = "Detalle De Empleados";
+}
+
+@using (Html.BeginForm("ViewEmpleados", "Home", FormMethod.Get))
+{
+    <div>
+        <h1> Listado de Empleados </h1>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th style="width:100px;">Legajo</th>
+                <th style="width:100px;">Nombre</th>
+                <th style="width:100px;">Apellido</th>
+                <th style="width:200px;">Edad</th>
+                <th style="width:200px;">Celular</th>
+                <th style="width:200px;">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var sist in Model)
+            {
+            <tr>
+                <td>@sist.Legajo</td>
+                <td>@sist.Nombre</td>
+                <td>@sist.Apellido</td>
+                <td>@sist.Edad</td>
+                <td>@sist.NroCelular</td>
+                <td>
+                    <a class="btn btn-primary" href="~/Home/ViewEditarEmpleado/@sist.IdEmpleado" title="Editar">
+                        Editar <i class="glyphicon glyphicon-pencil"></i>
+                    </a>                   
+                    <a class="btn btn-danger" href="~/Home/ViewEliminarEmpleado/@sist.IdEmpleado" title="Eliminar">
+                        Eliminar <i class="glyphicon glyphicon-minus"></i>
+                    </a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    <div>
+        <a class="btn btn-success" href="~/Home/ViewCrearEmpleado" title="Crear">
+            Agregar Empleado
+        </a>
+    </div>
+}

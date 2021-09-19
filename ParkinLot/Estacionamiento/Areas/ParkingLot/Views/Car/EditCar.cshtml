@@ -1,0 +1,49 @@
+﻿@using Estacionamiento.Resources;
+@using ParkingLot.Models.Areas.ParkingLot.Car;
+@using Estacionamiento.Controls;
+
+@model CarVM
+
+@{
+    ViewData["Title"] = "Detalle De Estacionamiento";
+}
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            @Labels.CarDetail
+        </h4>
+    </div>
+    <div id="Edit" class="form-horizontal" role="form">
+        <div class="panel-body">
+            <div class="row top-separation">
+                <div class="col-md-12 col-lg-12">
+                    <div class="row top-separation">
+                        @Html.LabelFor(m => m.CarDetail.Patente, Labels.Patent, ColumnWidth.Two)
+                        <div class="col-md-4">
+                            @Html.EditorFor(x => x.CarDetail.Patente)
+                        </div>
+                        @Html.LabelFor(m => m.CarDetail.Empleado, Labels.Employee, ColumnWidth.Two)
+                        <div class="col-md-4">
+                            @Html.EditorFor(x => x.CarDetail.Empleado)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row top-separation">
+                <div class="col-md-12 col-lg-12">
+                    <div class="row top-separation">
+                        @Html.LabelFor(m => m.CarDetail.Modelo, Labels.Model, ColumnWidth.Two)
+                        <div class="col-md-4">
+                            @Html.EditorFor(x => x.CarDetail.Modelo)
+                        </div>
+                        @Html.LabelFor(m => m.CarDetail.Empleado, Labels.Brand, ColumnWidth.Two)
+                        <div class="col-md-4">
+                            @Html.EditorFor(x => x.CarDetail.Marca)
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

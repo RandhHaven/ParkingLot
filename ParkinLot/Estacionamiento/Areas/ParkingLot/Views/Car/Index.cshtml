@@ -1,0 +1,19 @@
+﻿@using Estacionamiento.Resources;
+@using ParkingLot.Models.Areas.ParkingLot.Car;
+@using Estacionamiento.Controls;
+
+@model CarVM
+@{
+    ViewData["Title"] = "Detalle De Estacionamiento";
+}
+
+<div class="panel-group" id="accordion">
+    <div class="form-horizontal">
+        @await Html.PartialAsync("/Areas/ParkingLot/Views/Car/FilterCar.cshtml")
+        @await Html.PartialAsync("/Areas/ParkingLot/Views/Car/ViewCars.cshtml")
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/ParkingLot/ParkingLotCar.js"></script>
+}
