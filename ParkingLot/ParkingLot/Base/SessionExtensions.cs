@@ -1,4 +1,4 @@
-﻿namespace Estacionamiento.Base
+﻿namespace ParkingLot.Base
 {
     using Microsoft.AspNetCore.Http;
     using Newtonsoft.Json;

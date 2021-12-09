@@ -1,4 +1,4 @@
-﻿namespace Estacionamiento.Services.EmployeeServices
+﻿namespace ParkingLot.Services.EmployeeServices
 {
     using ParkingLot.Entity.Entitys;
     using ParkingLot.Models.Areas.ParkingLot.Employee;

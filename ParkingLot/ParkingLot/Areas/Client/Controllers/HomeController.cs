@@ -4,8 +4,8 @@
     using System.Diagnostics;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Logging;
-    using Estacionamiento.Base;
-    using Estacionamiento.Services.EmployeeServices;
+    using ParkingLot.Base;
+    using ParkingLot.Services.EmployeeServices;
     using ParkingLot.Models.Areas;
 
     [Area("Client")]
