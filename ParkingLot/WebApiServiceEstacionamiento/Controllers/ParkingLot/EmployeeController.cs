@@ -64,13 +64,7 @@
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            try
-            {
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            
         }
     }
 }
