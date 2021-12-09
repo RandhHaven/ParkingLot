@@ -132,6 +132,15 @@
   <data name="CarsList" xml:space="preserve">
     <value>Listado de Autos</value>
   </data>
+  <data name="Category" xml:space="preserve">
+    <value>Categoria</value>
+  </data>
+  <data name="Categorys" xml:space="preserve">
+    <value>Categorias</value>
+  </data>
+  <data name="CategoryTitle" xml:space="preserve">
+    <value>Categorias</value>
+  </data>
   <data name="CreateCar" xml:space="preserve">
     <value>Crear Auto</value>
   </data>
@@ -173,5 +182,8 @@
   </data>
   <data name="Results" xml:space="preserve">
     <value>Resultados</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>Estado</value>
   </data>
 </root>

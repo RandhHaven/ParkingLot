@@ -1,4 +1,4 @@
-﻿namespace EstacionamientoNetCore.APIS
+﻿namespace ParkingLot.Core.APIS
 {
     class APICar
     {

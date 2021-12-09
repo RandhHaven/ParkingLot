@@ -1,7 +1,6 @@
-﻿namespace Estacionamiento.Services
+﻿namespace ParkingLot.Services
 {
     public interface TUIService
     {
-
     }
 }

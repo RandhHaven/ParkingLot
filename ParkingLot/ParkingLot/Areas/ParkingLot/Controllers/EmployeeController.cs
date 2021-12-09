@@ -40,6 +40,12 @@
         {
             return View();
         }
+
+        [HttpGet]
+        public IActionResult EditEmployee()
+        {
+            return View();
+        }
         #endregion
     }
 }

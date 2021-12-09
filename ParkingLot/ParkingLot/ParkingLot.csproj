@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Areas\Shared\Controllers\**" />
+    <Content Remove="Areas\Shared\Controllers\**" />
+    <EmbeddedResource Remove="Areas\Shared\Controllers\**" />
+    <None Remove="Areas\Shared\Controllers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="bootstrap" Version="4.3.1" />
     <PackageReference Include="glyphicon" Version="1.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.10">
@@ -52,10 +59,6 @@
   <ItemGroup>
     <ProjectReference Include="..\EstacionamientoServices\ParkingLot.Services.csproj" />
     <ProjectReference Include="..\ParkingLotModels\ParkingLot.Models.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Areas\Shared\Controllers\" />
   </ItemGroup>
 
 </Project>

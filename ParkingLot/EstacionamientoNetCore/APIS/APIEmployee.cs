@@ -1,8 +1,8 @@
-﻿namespace EstacionamientoNetCore.APIS
+﻿namespace ParkingLot.Core.APIS
 {
-    using EstacionamientoEntity.Entitys;
-    using EstacionamientoNetCore.ApiHelpers;
     using Newtonsoft.Json;
+    using ParkingLot.Core.ApiHelpers;
+    using ParkingLot.Entity.Entitys;
     using System;
     using System.Collections.Generic;
     using System.Net.Http;
@@ -70,12 +70,13 @@
                     }
                 }
                 listEmployee = response;
-                return listEmployee;
+               
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+            return listEmployee;
         }
 
         public static List<EmployeeBase> PostEmployee(string urlToken, string urlBase, string app)

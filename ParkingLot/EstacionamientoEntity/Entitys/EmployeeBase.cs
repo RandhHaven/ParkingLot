@@ -1,4 +1,4 @@
-﻿namespace EstacionamientoEntity.Entitys
+﻿namespace ParkingLot.Entity.Entitys
 {
     using System;
 

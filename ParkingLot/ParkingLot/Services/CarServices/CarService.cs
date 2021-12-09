@@ -1,6 +1,6 @@
 ﻿namespace Estacionamiento.Services.CarServices
 {
-    using EstacionamientoEntity.Entitys;
+    using ParkingLot.Entity.Entitys;
     using ParkingLot.Models.Areas.ParkingLot.Car;
     using ParkingLot.Services.Areas.ParkinLot.CarServicesCore;
     using System;

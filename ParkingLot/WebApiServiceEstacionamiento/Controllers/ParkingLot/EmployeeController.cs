@@ -1,11 +1,10 @@
 ﻿namespace WebApiServiceEstacionamiento.Controllers
 {
     using System;
-    using System.Collections.Generic;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Logging;
-    using WebApiServiceEstacionamiento.Entities.Parking;
-    using Services.EmployeeServices;
+    using WebApiServiceEstacionamiento.Models.Parking;
+    using Services.ParkingLot.EmployeeServices;
     using System.Threading.Tasks;
     using AutoMapper;
 

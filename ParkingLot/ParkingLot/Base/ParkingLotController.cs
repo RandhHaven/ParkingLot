@@ -8,6 +8,7 @@
     using Microsoft.AspNetCore.Http;
     using Estacionamiento.Services;
     using ParkingLot.Models.Areas;
+    using ParkingLot.Services;
     #endregion
 
     public abstract class ParkingLotController<T> : Controller

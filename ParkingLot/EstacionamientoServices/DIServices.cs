@@ -1,8 +1,8 @@
 ﻿namespace EstacionamientoServices
 {
-    using EstacionamientoNetCore.CoreService.CarCoreServices;
-    using EstacionamientoNetCore.CoreService.EmployeeCoreServices;
     using Microsoft.Extensions.DependencyInjection;
+    using ParkingLot.Core.CoreService.CarCoreServices;
+    using ParkingLot.Core.CoreService.EmployeeCoreServices;
 
     public static class DIServices
     {

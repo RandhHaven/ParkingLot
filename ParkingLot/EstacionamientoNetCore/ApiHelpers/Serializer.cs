@@ -1,4 +1,4 @@
-﻿namespace EstacionamientoNetCore.ApiHelpers
+﻿namespace ParkingLot.Core.ApiHelpers
 {
     using System.IO;
     using System.Xml.Serialization;
@@ -8,7 +8,7 @@
     {
         public T Deserialize<T>(string input)
         {
-            System.Xml.Serialization.XmlSerializer ser = new System.Xml.Serialization.XmlSerializer(typeof(T));
+            XmlSerializer ser = new XmlSerializer(typeof(T));
 
             using (StringReader sr = new StringReader(input))
             {

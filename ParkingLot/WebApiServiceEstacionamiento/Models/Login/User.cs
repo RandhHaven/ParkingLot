@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebApiServiceEstacionamiento.Entities.Login
+namespace WebApiServiceEstacionamiento.Models.Login
 {
-    public class Usercs
+    public class User
     {
     }
 }

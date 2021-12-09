@@ -28,6 +28,8 @@
             }
         }
 
+        protected TUIService UIService { get; private set; }
+
         protected abstract string Title { get; }
 
         #endregion
@@ -89,22 +91,22 @@
             TempData[this.PageTempDataToken + key] = value;
         }
 
-        protected T GetTempData<T>(string key)
+        protected T GetTempData(string key)
         {
             return (T)TempData.Peek(this.PageTempDataToken + key);
         }
 
-        protected T GetTempData<T>(string key, string externalToken)
+        protected T GetTempData(string key, string externalToken)
         {
             return (T)TempData.Peek(externalToken + key);
         }
 
-        protected T GetTempDataAndDispose<T>(string key)
+        protected T GetTempDataAndDispose(string key)
         {
-            return this.GetTempDataAndDispose<T>(key, false);
+            return this.GetTempDataAndDispose(key, false);
         }
 
-        protected T GetTempDataAndDispose<T>(string key, bool safeCast)
+        protected T GetTempDataAndDispose(string key, bool safeCast)
         {
             var value = TempData[this.PageTempDataToken + key];
 

@@ -1,6 +1,6 @@
 ﻿namespace Estacionamiento.Services.EmployeeServices
 {
-    using EstacionamientoEntity.Entitys;
+    using ParkingLot.Entity.Entitys;
     using ParkingLot.Models.Areas.ParkingLot.Employee;
     using ParkingLot.Services.Areas.ParkinLot.EmployeeServicesCore;
     using System;
@@ -28,12 +28,11 @@
             List<EmployeeDetailVM> listEmployee = new List<EmployeeDetailVM>();
             try
             {
-                var listEmpleadoBase = _core.GetListadoEmpleadosRec();
+                var listEmpleadoBase = _core.GetListadoEmpleados();
                 this.GetEmpleadoMappping(listEmpleadoBase, ref listEmployee);
             }
             catch (Exception ex)
             {
-                throw ex;
             }
             employeeVM.List = listEmployee;
             return employeeVM;

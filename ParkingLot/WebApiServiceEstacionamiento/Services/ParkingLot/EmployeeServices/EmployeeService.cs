@@ -1,10 +1,10 @@
-﻿namespace WebApiServiceEstacionamiento.Services.EmployeeServices
+﻿namespace WebApiServiceEstacionamiento.Services.ParkingLot.EmployeeServices
 {
     using Microsoft.EntityFrameworkCore;
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    using WebApiServiceEstacionamiento.Entities.Parking;
+    using WebApiServiceEstacionamiento.Models.Parking;
     using WebApiServiceEstacionamiento.ParkingLotModel;
 
     public class EmployeeService : IEmployeeService

@@ -1,4 +1,4 @@
-﻿namespace EstacionamientoNetCore.ApiHelpers
+﻿namespace ParkingLot.Core.ApiHelpers
 {
     public class RestHeaderParameter
     {

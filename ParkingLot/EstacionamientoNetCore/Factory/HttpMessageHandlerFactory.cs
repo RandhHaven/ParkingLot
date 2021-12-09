@@ -1,4 +1,4 @@
-﻿namespace EstacionamientoNetCore.Factory
+﻿namespace ParkingLot.Core.Factory
 {
     using System.Net.Http;
     using System.Security.Cryptography.X509Certificates;

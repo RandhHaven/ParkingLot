@@ -9,8 +9,10 @@ namespace WebApiServiceEstacionamiento
     using Microsoft.Extensions.Hosting;
     using System;
     using WebApiServiceEstacionamiento.ParkingLotModel;
-    using WebApiServiceEstacionamiento.Services.CarServices;
-    using WebApiServiceEstacionamiento.Services.EmployeeServices;
+    using WebApiServiceEstacionamiento.Services.CategoryServices;
+    using WebApiServiceEstacionamiento.Services.ParkingLot.CarServices;
+    using WebApiServiceEstacionamiento.Services.ParkingLot.EmployeeServices;
+    using WebApiServiceEstacionamiento.Services.GenericRepository;
 
     public class Startup
     {
@@ -28,10 +30,12 @@ namespace WebApiServiceEstacionamiento
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddDbContext<DatabaseContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("AppConnection")));
-            #region Services
 
+            #region Services
             services.AddScoped<ICarService, CarService>();
             services.AddScoped<IEmployeeService, EmployeeService>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
             #endregion
         }
 

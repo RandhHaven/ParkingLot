@@ -1,7 +1,7 @@
-﻿namespace WebApiServiceEstacionamiento.Services.CarServices
+﻿namespace WebApiServiceEstacionamiento.Services.ParkingLot.CarServices
 {
     using System.Threading.Tasks;
-    using WebApiServiceEstacionamiento.Entities.Parking;
+    using WebApiServiceEstacionamiento.Models.Parking;
     using System.Collections.Generic;
     using System;
 

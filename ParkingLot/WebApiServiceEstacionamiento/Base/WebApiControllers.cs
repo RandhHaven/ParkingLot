@@ -1,19 +1,21 @@
 ﻿namespace WebApiServiceEstacionamiento.Controllers
 {
-    using AutoMapper;
     #region Directives
+    using AutoMapper;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Logging;
-    using System.Collections.Generic;
-    using System.Linq;
-    using WebApiServiceEstacionamiento.Entities;
     using WebApiServiceEstacionamiento.Services;
+    using WebApiServiceEstacionamiento.Services.GenericRepository;
     #endregion
 
     public abstract class WebApiControllers<T> : ControllerBase
     {
         #region Builds
         protected WebApiControllers(ILogger<T> logger, TUIService uIService, IMapper _mapper)
+        {
+        }
+
+        protected WebApiControllers(IUnitOfWork uIService)
         {
         }
 

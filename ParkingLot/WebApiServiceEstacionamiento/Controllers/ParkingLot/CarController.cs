@@ -6,9 +6,9 @@
     using AutoMapper;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Logging;
-    using WebApiServiceEstacionamiento.Entities.Parking;
+    using WebApiServiceEstacionamiento.Models.Parking;
     using WebApiServiceEstacionamiento.Models;
-    using WebApiServiceEstacionamiento.Services.CarServices;
+    using WebApiServiceEstacionamiento.Services.ParkingLot.CarServices;
     #endregion
 
     [Route("api/[controller]")]

@@ -1,6 +1,6 @@
 ﻿namespace ParkingLot.Services.Areas.ParkinLot.CarServicesCore
 {
-    using EstacionamientoEntity.Entitys;
+    using ParkingLot.Entity.Entitys;
     using System;
     using System.Collections.Generic;
 

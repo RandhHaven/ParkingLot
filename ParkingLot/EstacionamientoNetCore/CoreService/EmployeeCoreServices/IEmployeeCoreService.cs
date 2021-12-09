@@ -1,4 +1,4 @@
-﻿namespace EstacionamientoNetCore.CoreService.EmployeeCoreServices
+﻿namespace ParkingLot.Core.CoreService.EmployeeCoreServices
 {
     public interface IEmployeeCoreService : TUIServiceCore
     {

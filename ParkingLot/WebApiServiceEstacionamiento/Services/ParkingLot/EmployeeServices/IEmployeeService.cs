@@ -1,9 +1,9 @@
-﻿namespace WebApiServiceEstacionamiento.Services.EmployeeServices
+﻿namespace WebApiServiceEstacionamiento.Services.ParkingLot.EmployeeServices
 {
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    using WebApiServiceEstacionamiento.Entities.Parking;
+    using WebApiServiceEstacionamiento.Models.Parking;
 
     public interface IEmployeeService : TUIService
     {

@@ -2,8 +2,9 @@
 {
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
-    using WebApiServiceEstacionamiento.Entities.Parking;
-    using WebApiServiceEstacionamiento.Entities.Controls;
+    using WebApiServiceEstacionamiento.Models.Parking;
+    using WebApiServiceEstacionamiento.Models.Controls;
+    using WebApiServiceEstacionamiento.Models.Admin;
 
     public partial class DatabaseContext : DbContext
     {
@@ -16,6 +17,9 @@
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<Gender> Genders { get; set; }
         public virtual DbSet<DocumentTypes> DocumentTypes { get; set; }
+        public virtual DbSet<Category> Category { get; set; }
+        public virtual DbSet<ModelCar> ModelCar { get; set; }
+        public virtual DbSet<BrandCar> BrandCar { get; set; }
         #endregion
 
         #region Builds

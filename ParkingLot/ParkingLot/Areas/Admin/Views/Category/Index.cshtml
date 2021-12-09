@@ -1,0 +1,19 @@
+﻿@using ParkingLot.Resources;
+@using ParkingLot.Models.Areas.Admin.Category;
+@using ParkingLot.Controls;
+
+@model CategoryVM
+
+@{
+    ViewData["Title"] = @ViewBag.Title;
+}
+
+<div class="panel-group" id="accordion">
+    <div class="form-horizontal">
+        @await Html.PartialAsync("/Areas/Admin/Views/Category/ViewCategorys.cshtml")
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/ParkingLot/AdmCategory.js"></script>
+}
