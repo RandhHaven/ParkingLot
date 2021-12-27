@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ParkingLot.Resources {
+namespace ParkingNet.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ParkingLot.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ParkingLot.Resources.Alerts", typeof(Alerts).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ParkingNet.Resources.Alerts", typeof(Alerts).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

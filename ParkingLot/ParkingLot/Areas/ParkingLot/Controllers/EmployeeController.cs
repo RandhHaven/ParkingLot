@@ -1,7 +1,7 @@
-﻿namespace ParkingLot.Controllers
+﻿namespace ParkingNet.Controllers
 {
-    using ParkingLot.Base;
-    using ParkingLot.Services.EmployeeServices;
+    using ParkingNet.Base;
+    using ParkingNet.Services.EmployeeServices;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Logging;
 

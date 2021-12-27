@@ -1,11 +1,11 @@
-﻿namespace Estacionamiento.Areas.Client.Controllers
+﻿namespace ParkingNet.Areas.Client.Controllers
 {
     using System;
     using System.Diagnostics;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Logging;
-    using ParkingLot.Base;
-    using ParkingLot.Services.EmployeeServices;
+    using ParkingNet.Base;
+    using ParkingNet.Services.EmployeeServices;
     using ParkingLot.Models.Areas;
 
     [Area("Client")]

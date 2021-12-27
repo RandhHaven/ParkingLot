@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <PackageVersion>0.0.1</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,15 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="bootstrap" Version="4.3.1" />
-    <PackageReference Include="glyphicon" Version="1.0.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.10">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
-    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <ProjectReference Include="..\ParkingLot.Models\ParkingLot.Models.csproj" />
+    <ProjectReference Include="..\ParkingLot.Services\ParkingLot.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -55,11 +47,6 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Messages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\EstacionamientoServices\ParkingLot.Services.csproj" />
-    <ProjectReference Include="..\ParkingLotModels\ParkingLot.Models.csproj" />
   </ItemGroup>
 
 </Project>

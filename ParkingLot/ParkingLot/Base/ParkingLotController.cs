@@ -1,4 +1,4 @@
-﻿namespace ParkingLot.Base
+﻿namespace ParkingNet.Base
 {
     #region Directives
     using Microsoft.AspNetCore.Mvc;
@@ -6,8 +6,9 @@
     using System;
     using System.Collections.Generic;
     using Microsoft.AspNetCore.Http;
-    using ParkingLot.Services;
+    using ParkingNet.Services;
     using ParkingLot.Models.Areas;
+    using ParkingLot.Services;
     #endregion
 
     public abstract class ParkingLotController<T> : Controller

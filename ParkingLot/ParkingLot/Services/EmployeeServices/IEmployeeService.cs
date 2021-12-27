@@ -1,4 +1,4 @@
-﻿namespace ParkingLot.Services.EmployeeServices
+﻿namespace ParkingNet.Services.EmployeeServices
 {
     using ParkingLot.Models.Areas.ParkingLot.Employee;
     using ParkingLot.Services;

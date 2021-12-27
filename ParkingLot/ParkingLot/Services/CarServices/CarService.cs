@@ -1,4 +1,4 @@
-﻿namespace ParkingLot.Services.CarServices
+﻿namespace ParkingNet.Services.CarServices
 {
     using ParkingLot.Entity.Entitys;
     using ParkingLot.Models.Areas.ParkingLot.Car;

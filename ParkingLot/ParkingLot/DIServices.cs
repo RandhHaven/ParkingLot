@@ -1,11 +1,11 @@
-﻿namespace Estacionamiento
+﻿namespace ParkingNet
 {
-    using ParkingLot.Services.CarServices;
-    using ParkingLot.Services.EmployeeServices;
+    using ParkingNet.Services.CarServices;
+    using ParkingNet.Services.EmployeeServices;
     using Microsoft.Extensions.DependencyInjection;
     using ParkingLot.Services.Areas.ParkinLot.CarServicesCore;
     using ParkingLot.Services.Areas.ParkinLot.EmployeeServicesCore;
-    using ParkingLot.Services.CategoryServices;
+    using ParkingNet.Services.CategoryServices;
 
     public static class DIServices
     {
@@ -13,10 +13,9 @@
         {
             services.AddScoped<ICarService, CarService>();
             services.AddScoped<IEmployeeService, EmployeeService>();
+            services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<ICarServiceCore, CarServiceCore>();
             services.AddScoped<IEmployeeServiceCore, EmployeeServiceCore>();
-
-            services.AddScoped<ICategoryService, CategoryService>();
         }
     }
 }

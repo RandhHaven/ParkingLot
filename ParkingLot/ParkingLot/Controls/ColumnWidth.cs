@@ -1,4 +1,4 @@
-﻿namespace ParkingLot.Controls
+﻿namespace ParkingNet.Controls
 {
     public enum ColumnWidth
     {

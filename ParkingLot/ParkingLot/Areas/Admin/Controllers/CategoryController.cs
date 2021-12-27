@@ -1,12 +1,12 @@
 ﻿namespace ParkingLot.Areas.Admin.Controllers
 {
-    using ParkingLot.Base;
-    using ParkingLot.Services;
+    using ParkingNet.Base;
+    using ParkingNet.Services;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Logging;
     using ParkingLot.Models.Areas.Admin.Category;
-    using ParkingLot.Resources;
-    using ParkingLot.Services.CategoryServices;
+    using ParkingNet.Resources;
+    using ParkingNet.Services.CategoryServices;
 
     [Area("Admin")]
     public class CategoryController : GenericControllerBase<CategoryController, ICategoryService, CategoryVM>
@@ -33,7 +33,8 @@
 
         public override ViewResult View()
         {
-            return base.View();
+            var Carvm = this.UIService.GetAllCategory();
+            return View(Carvm);
         }
     }
 }

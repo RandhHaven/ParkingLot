@@ -1,5 +1,4 @@
-﻿
-namespace ParkingLot.Services.CategoryServices
+﻿namespace ParkingNet.Services.CategoryServices
 {
     using ParkingLot.Models.Areas.Admin.Category;
 
