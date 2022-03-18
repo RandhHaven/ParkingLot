@@ -40,7 +40,7 @@
         public ActionResult GetCars()
         {
             var CarVM = _ICarService.GetAutos();
-            return Json(new { data = CarVM.List });            
+            return Json(new { data = CarVM.List });
         }
 
         public override void OnInitialize(ILogger<CarController> logger)
@@ -52,6 +52,8 @@
         public IActionResult Index()
         {
             return View();
+
+
         }
 
         [HttpGet]
